@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Pokémon</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="lib/jquery-3.1.1.js" type="text/javascript"></script>
+        <script src="lib/npm.js" type="text/javascript"></script>
+        <script src="lib/angular.min.js" type="text/javascript"></script>
+        <script src="lib/bootstrap.js" type="text/javascript"></script>
+        <link href="lib/bootstrap.css" rel="stylesheet" type="text/css"/>
+        <script src="lib/angular-resource.js" type="text/javascript"></script>
+        <script src="controller.js" type="text/javascript"></script>
+        <script src="service.js" type="text/javascript"></script>
+    </head>
+    <body ng-app="myApp">
+        <div class="container" ng-controller="myController">
+            <div class="page-header text-center">
+                <div class="container">
+                    <div class="row">
+                        <strong>Create a Pokémon</strong>
+                        <form class="form-inline">
+                            <input type="text" placeholder="Pokémon name" ng-model="pkmName">
+                            <input type="text" placeholder="Type 1" ng-model="pkmType1">
+                            <input type="text" placeholder="Type 2" ng-model="pkmType2">
+                            <input type="text" placeholder="Pokémon nick" ng-model="pkmNick">
+                            <input type="text" placeholder="Pokémon evolution" ng-model="pkmEvol">
+                            <br>
+                            <a class="btn btn-primary" ng-click="pkmSubFunc()"><span class="glyphicon glyphicon-ok"></span> Create Pokémon</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Type</th>
+                                <th>Nickname</th>
+                                <th>Evolution</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="pkm in pokemons track by $index">
+                                <td>{{pkm.nombre}}</td> 
+                                <td>{{pkm.tipo}}</td>
+                                <td>{{pkm.nick}}</td>
+                                <td>{{pkm.evolucion}}</td>
+                                <td>
+                                    <a ng-click="deletePkmFunc($index)" class='btn alert-danger'>
+                                        Remove
+                                        <span class="glyphicon glyphicon-remove">
+                                        </span>    
+                                    </a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+    </body>
+</html>
