@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Retos Mentales</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="../lib/jquery-3.1.1.js" type="text/javascript"></script>
+        <script src="../lib/npm.js" type="text/javascript"></script>
+        <script src="../lib/bootstrap.js" type="text/javascript"></script>
+        <link href="../lib/bootstrap.css" rel="stylesheet" type="text/css"/>
+        <script src="script.js" type="text/javascript"></script>
+        <link href="../lib/style.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+
+        <div class="page-header text-center">
+            <div class="container">
+                <div class="row">
+                    <button class="btn btn-primary btn-xl">START</button>
+                </div> 
+            </div>
+        </div>
+        <div class="container text-center">
+
+            <!-- Este alert solo se mostrará cuando el usuario clickee en start
+            y ponga el ratón encima de la imagen-->
+            <!--ALERT-->
+            <div class="row">
+                <div class="alert alert-danger">
+                    <span class="glyphicon glyphicon-question-sign"></span>
+                    <strong>¡Pista!</strong>
+                    ¡Encuentra la naranja diferente!
+                </div>
+            </div>
+            <!--ALERT-->
+            
+            <!--IMAGEN-->
+            <div class="row">
+                <img src="../img/encuentra_el_diferente.jpg">
+            </div>
+            <!--IMAGEN-->
+
+            <!-- La pregunta solo se mostrará cuando el usuario saque el ratón de la imagen
+            y la imagen será ocultada
+            
+            **Si la pregunta es acertada, se coloreará el check box correcto de color verde
+            y se mostrará la imagen para verificarlo. En caso de fallo se hará lo mismo pero
+            de color rojo y mostrar la correcta-->
+            <!--PREGUNTA-->
+            <form class="form-inline">
+                <div class="radio">
+                    <label><input type="radio" name="resp1">Respuesta 1</label>
+                </div>
+                <div class="radio">
+                    <label><input type="radio" name="resp2">Respuesta 2</label>
+                </div>
+            </form>
+            <!--PREGUNTA-->
+        </div>
+    </body>
+</html>
