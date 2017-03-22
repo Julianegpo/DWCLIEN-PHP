@@ -26,9 +26,6 @@ and open the template in the editor.
             </div>
         </div>
         <div class="container text-center">
-
-            <!-- Este alert solo se mostrará cuando el usuario clickee en start
-            y ponga el ratón encima de la imagen-->
             <!--ALERT-->
             <div class="row" id="pista">
             </div>
@@ -38,17 +35,18 @@ and open the template in the editor.
             <div class="row" id="imagen">
             </div>
             <!--IMAGEN-->
-
-            <!-- La pregunta solo se mostrará cuando el usuario saque el ratón de la imagen
-            y la imagen será ocultada
             
-            **Si la pregunta es acertada, se coloreará el check box correcto de color verde
-            y se mostrará la imagen para verificarlo. En caso de fallo se hará lo mismo pero
-            de color rojo y mostrar la correcta-->
             <!--PREGUNTA-->
             <form class="form-inline" id="pregunta">
             </form>
             <!--PREGUNTA-->
+            
+            <!--RESPUESTAS-->
+            <strong id="respuestasLbl">Respuestas: </strong>
+            <form class="form-inline" id="respuestas">
+                <input class="radio" type="radio" name="resp" value="si"><span id="si">Si</span>
+                <input class="radio" type="radio" name="resp" value="no"><span id="no">No</span>
+            </form>
         </div>
     </body>
 </html>
