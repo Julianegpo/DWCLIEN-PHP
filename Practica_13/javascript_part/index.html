@@ -21,7 +21,7 @@ and open the template in the editor.
         <div class="page-header text-center">
             <div class="container">
                 <div class="row">
-                    <button class="btn btn-primary btn-xl">START</button>
+                    <button class="btn btn-primary btn-xl" id="start">START</button>
                 </div> 
             </div>
         </div>
@@ -30,18 +30,12 @@ and open the template in the editor.
             <!-- Este alert solo se mostrará cuando el usuario clickee en start
             y ponga el ratón encima de la imagen-->
             <!--ALERT-->
-            <div class="row">
-                <div class="alert alert-danger">
-                    <span class="glyphicon glyphicon-question-sign"></span>
-                    <strong>¡Pista!</strong>
-                    ¡Encuentra la naranja diferente!
-                </div>
+            <div class="row" id="pista">
             </div>
             <!--ALERT-->
             
             <!--IMAGEN-->
-            <div class="row">
-                <img src="../img/encuentra_el_diferente.jpg">
+            <div class="row" id="imagen">
             </div>
             <!--IMAGEN-->
 
@@ -52,13 +46,7 @@ and open the template in the editor.
             y se mostrará la imagen para verificarlo. En caso de fallo se hará lo mismo pero
             de color rojo y mostrar la correcta-->
             <!--PREGUNTA-->
-            <form class="form-inline">
-                <div class="radio">
-                    <label><input type="radio" name="resp1">Respuesta 1</label>
-                </div>
-                <div class="radio">
-                    <label><input type="radio" name="resp2">Respuesta 2</label>
-                </div>
+            <form class="form-inline" id="pregunta">
             </form>
             <!--PREGUNTA-->
         </div>
