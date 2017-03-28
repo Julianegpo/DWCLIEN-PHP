@@ -6,8 +6,6 @@ window.onload = function(){
     document.getElementById("respuestas")
             .addEventListener("click", checkRespuesta, false);
     
-   
-    
     document.getElementById("pista").style.visibility = "hidden";
     document.getElementById("pregunta").style.visibility = "hidden";
     document.getElementById("respuestas").style.visibility = "hidden";
@@ -26,7 +24,7 @@ function checkRespuesta(){
             var xmlHttp = new XMLHttpRequest();
     
             // url destino + parámetros
-            xmlHttp.open("GET", "response.php?respuesta="+value+"", true);
+            xmlHttp.open("GET", "ajax.php?respuesta="+value+"", true);
             xmlHttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 
             // qué hacer con la respuesta, quién recibe
@@ -52,7 +50,7 @@ function ajaxRutaImagen(){
     var xmlHttp = new XMLHttpRequest();
     
     // url destino + parámetros
-    xmlHttp.open("GET", "response.php?ruta=si", true);
+    xmlHttp.open("GET", "ajax.php?ruta=si", true);
     xmlHttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
     
     // qué hacer con la respuesta, quién recibe
@@ -63,7 +61,7 @@ function ajaxRutaImagen(){
         
             var ruta = respuestaJSON.ruta;
             console.log(ruta);
-            var img = "<img id='img' src='"+ruta+"'/>";
+            var img = "<img id='img' src='../img/"+ruta+"'/>";
             var divImagen = document.getElementById("imagen");
             divImagen.addEventListener("mouseover", ajaxPista, false);
             divImagen.addEventListener("mouseout", ajaxPregunta, false);
@@ -85,7 +83,7 @@ function ajaxPista(){
     var xmlHttp = new XMLHttpRequest();
     
     // url destino + parámetros
-    xmlHttp.open("GET", "response.php?pista=si", true);
+    xmlHttp.open("GET", "ajax.php?pista=si", true);
     xmlHttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
     
     // qué hacer con la respuesta, quién recibe
@@ -113,7 +111,7 @@ function ajaxPregunta(){
     var xmlHttp = new XMLHttpRequest();
     
     // url destino + parámetros
-    xmlHttp.open("GET", "response.php?pregunta=si", true);
+    xmlHttp.open("GET", "ajax.php?pregunta=si", true);
     xmlHttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
     
     // qué hacer con la respuesta, quién recibe
