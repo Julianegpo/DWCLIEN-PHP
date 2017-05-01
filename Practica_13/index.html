@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Retos Mentales</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="repteMental.js" type="text/javascript"></script>
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>      
+    </head>
+    <body>
+
+        <div class="page-header text-center">
+            <div class="container">
+                <div class="row">
+                    <button class="btn btn-primary btn-xl" id="start">START</button>
+                </div> 
+                <div class="row">
+                    <button class="btn btn-info btn-xl disabled" id="new">NEW</button>
+                </div>
+                <h1>Aciertos y fallos</h1>
+                <div id="aciertosFallos"></div>
+                <h1>Colores</h1>
+                <div class="row" id="colores"></div>
+            </div>
+        </div>
+        
+        <div class="container text-center">
+            <!--img-->
+            <div class="row">
+                <div id="imagen"></div>
+            </div>
+            
+            <!-- pista -->
+            <div class="row">
+                <div>
+                    <strong id="pistaLbl">Pista: </strong><div id="pista"></div>
+                </div>
+            </div>
+            
+            <!-- pregunta -->
+            <div class="pregunta">
+                <div>
+                    <strong id="preguntaLbl">Pregunta: </strong><div id="pregunta"></div>
+                </div>
+            </div>
+            
+            <!--respuestas-->
+            <strong id="respuestasLbl">Respuestas: </strong>
+            <form class="form-inline" id="respuestas">
+                <input class="radio" type="radio" name="resp" value="si"><span id="si">Si</span>
+                <input class="radio" type="radio" name="resp" value="no"><span id="no">No</span>
+            </form>
+        </div>
+    </body>
+</html>
